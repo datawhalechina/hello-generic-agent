@@ -45,6 +45,7 @@ export default defineConfig({
         text: 'Part 1：应用篇',
         items: [
           { text: '第1章：安装与环境配置', link: '/part1/chapter1/' },
+          { text: '第2章：浏览器能力解锁', link: '/part1/chapter2/' },
           { text: '第6章：进阶玩法',
             items: [
               { text: '6.1 自主行动模式', link: '/part1/chapter6/advanced-usage#_6-1-自主行动模式-autonomous' },
