@@ -4,8 +4,9 @@ import type { Theme } from 'vitepress'
 import 'viewerjs/dist/viewer.min.css';
 import imageViewer from 'vitepress-plugin-image-viewer';
 import vImageViewer from 'vitepress-plugin-image-viewer/lib/vImageViewer.vue';
-import { useRoute } from 'vitepress';
+import { useRoute, useData } from 'vitepress';
 import { h } from 'vue';
+import HomeHero from './components/HomeHero.vue';
 
 // 公告栏组件
 const Announcement = () => h('div', {
@@ -17,6 +18,7 @@ export default {
     enhanceApp({ app }) {
         // 注册全局组件（可选）
         app.component('vImageViewer', vImageViewer);
+        app.component('HomeHero', HomeHero);
     },
     setup() {
         const route = useRoute();
@@ -25,7 +27,8 @@ export default {
     },
     Layout() {
         return h(DefaultTheme.Layout, null, {
-            'layout-top': () => h(Announcement)
+            'layout-top': () => h(Announcement),
+            'home-hero-before': () => h(HomeHero),
         })
     }
 } satisfies Theme

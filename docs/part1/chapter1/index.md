@@ -25,20 +25,32 @@ GA 依赖 Python 运行，我们先把它装好。
 3. 验证安装：按 `Win + R` 输入 `cmd` 打开终端，输入：
 
    ```bash
-   python3 --version
+   python --version
    ```
 
    看到 `Python 3.x.x` 就说明安装成功了。
 
-### macOS / Linux
+### macOS 
 
-macOS 和大多数 Linux 发行版自带 Python 3，打开终端验证：
+macOS 和大多数 Linux 发行版自带 Python 3，打开终端（Terminal）验证：
 
 ```bash
 python3 --version
 ```
 
 看到 `Python 3.x.x`（3.11 或 3.12）即可。如果版本低于 3.10，前往 [Python 官网](https://www.python.org/downloads/) 下载安装。
+
+1. 打开下载链接：https://www.python.org/ftp/python/3.12.10/python-3.12.10-macos11.pkg
+2. 运行安装包，一步一步跟着流程安装即可
+
+   <img src="./images/img_7.png" width="656" alt="img">
+3. 验证安装：打开系统自带终端，输入：
+
+```bash
+python3 --version
+```
+
+    看到`Python 3.x.x` 就说明安装成功了。
 
 ---
 
@@ -70,11 +82,11 @@ git clone https://github.com/lsdefine/GenericAgent.git
 
 ```bash
 # 1. cd 到下载的 GA 文件目录
-cd d:     (如果你的安装地址在D盘，终端打开后默认在c盘,安装在c盘跳过此步骤)
-cd "你的GenericAgent路径"（示例： cd D:/Document/GenericAgent-main） 
+cd d:     (如果你的安装地址在D盘，终端打开后默认在c盘,安装在c盘跳过此步骤，仅限windows用户)
+cd "你的GenericAgent路径"               （示例： cd D:/Document/GenericAgent-main） 
 
 # 2. 安装最小环境依赖
-pip install streamlit pywebview
+pip install streamlit pywebview / pip3 install streamlit pywebview  (python3对应pip3)
 ```
 
 ![](./images/img_3.png)
@@ -205,7 +217,6 @@ mixin_config = {
 
 **约束**：`llm_nos` 中的名字必须精确匹配到其他 config 的 `name` 字段；所有被引用的 session **必须同属** Native 系列（NativeClaude + NativeOAI 可混）或**全不属** Native 系列。
 
-
 ---
 
 ## 1.5 启动 GenericAgent
@@ -250,8 +261,6 @@ GA 会自动配好。如果你电脑上没有 Git，它也会帮你下载 portab
 请帮我在桌面创建一个 launch.pyw 的快捷方式
 ```
 
-
-
 ### 使用 Hub 总控台（可选）
 
 `hub.pyw` 是 GA 的总控台——一键启动/停止所有后台服务，并实时查看日志。
@@ -278,7 +287,6 @@ GA 会自动配好。如果你电脑上没有 Git，它也会帮你下载 portab
 | 11 | frontends/wecomapp.py    | 企业微信机器人                        | python frontends/wecomapp.py                        |
 
 </details>
-
 
 ---
 
