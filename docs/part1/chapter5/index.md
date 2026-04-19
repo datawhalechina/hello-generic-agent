@@ -451,7 +451,8 @@ python frontends/fsapp.py &
 
 ---
 
-## 📂 相关文件速查
+<details>
+<summary><strong>📂 相关文件速查</strong></summary>
 
 | 文件 / 目录                  | 作用                       |
 | ---------------------------- | -------------------------- |
@@ -462,6 +463,8 @@ python frontends/fsapp.py &
 | `frontends/tgapp.py`       | Telegram 前端启动脚本      |
 | `frontends/wecomapp.py`    | 企业微信前端启动脚本       |
 | `mykey.py`                 | 所有平台密钥的统一配置文件 |
+
+</details>
 
 ---
 

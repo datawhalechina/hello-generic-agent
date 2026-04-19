@@ -461,7 +461,8 @@ native_claude_config = {
 
 ---
 
-### 相关文件速查
+<details>
+<summary><strong>📂 相关文件速查</strong></summary>
 
 
 | 内容                  | 路径                    |
@@ -474,6 +475,8 @@ native_claude_config = {
 | 默认 Web UI           | `frontends/stapp.py`  |
 | Anthropic 风格 Web UI | `frontends/stapp2.py` |
 
+
+</details>
 
 ---
 
