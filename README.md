@@ -4,13 +4,14 @@
 
 # Hello Generic Agent（🧪 Beta公测版）
 
-<p><em>从安装到原理，全面掌握以"上下文信息密度最大化"为核心的通用智能体</em></p>
+<p><em>从安装到原理，全面掌握以"上下文信息密度最大化"为核心的 Generic Agent</em></p>
 
 <img src="https://img.shields.io/github/stars/datawhalechina/hello-generic-agent?style=flat&logo=github" alt="GitHub stars"/>
 <img src="https://img.shields.io/github/forks/datawhalechina/hello-generic-agent?style=flat&logo=github" alt="GitHub forks"/>
 <img src="https://img.shields.io/badge/language-Chinese-brightgreen?style=flat" alt="Language"/>
 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" alt="License"/></a>
 <a href="https://datawhalechina.github.io/hello-generic-agent/"><img src="https://img.shields.io/badge/在线阅读-Online%20Reading-green?style=flat&logo=gitbook" alt="Online Reading"></a>
+<a href="https://github.com/lsdefine/GenericAgent"><img src="https://img.shields.io/badge/GA%20主仓库-GenericAgent-blue?style=flat&logo=github" alt="GenericAgent"></a>
 
 </div>
 
@@ -79,12 +80,11 @@
 &emsp;&emsp;项目分为三大部分，每一部分都是通往下一阶段的坚实阶梯：
 
 - **第一部分：应用指南**（第1章～第6章），从安装环境、解锁浏览器能力开始，到记忆与技能体系、聊天平台集成，最后掌握自主行动、定时任务、子智能体等进阶技巧。零门槛上手，一步步把 GA 变成你的专属助手。
-
 - **第二部分：原理篇**（第7章～第13章），深入 GA 的设计哲学。从"上下文信息密度最大化"这一第一性原理出发，逐步拆解系统架构、最小原子工具集、分层记忆、上下文压缩、自我进化机制，直到理解简单原语如何涌现出复杂能力。
-
 - **第三部分：案例篇**，通过办公、娱乐、挖宝等真实场景的实战案例，将前两部分所学融会贯通。
 
 &emsp;&emsp;建议按顺序学习，也可以根据自己的需求选择性阅读：
+
 - **零基础用户**：从第一部分开始，先跑通安装和基本使用
 - **想了解原理**：直接进入第二部分，深入架构设计与技术细节
 - **想快速实战**：跳到第三部分案例篇，边做边学
@@ -94,8 +94,8 @@
 | 姓名   | 职责             | 简介                    |
 | :----- | :--------------- | :---------------------- |
 | 张洲嘉 | 项目负责人       | 复旦大学                |
-| 朱家杰 | 第一章内容贡献者 | 复旦大学                |
 | 沈豪   | 实战Case贡献者   | 复旦大学，Datawhale成员 |
+| 朱家杰 | 第一章内容贡献者 | 复旦大学                |
 | 杨航   | 第二章内容贡献者 | 复旦大学                |
 | 袁雨奇 | 第三章内容贡献者 | 复旦大学                |
 | 曹兮   | 第四章贡献者     | 复旦大学                |
