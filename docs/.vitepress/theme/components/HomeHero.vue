@@ -6,7 +6,7 @@
         <p class="eyebrow">DATAWHALE 开源教程</p>
         <h1 class="headline">Hello,<br/>Generic Agent.</h1>
         <p class="subtext">
-          从零开始，系统学习通用 AI Agent 的构建方法。<br/>
+          从零开始，系统学习Generic Agent的构建方法。<br/>
           理论筑基 × 实战驱动 × 开源共建
         </p>
         <div class="hero-buttons">
