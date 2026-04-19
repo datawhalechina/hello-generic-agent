@@ -10,7 +10,7 @@
           理论筑基 × 实战驱动 × 开源共建
         </p>
         <div class="hero-buttons">
-          <a class="btn-primary" :href="'/hello-generic-agent/chapter1/'" >开始学习</a>
+          <a class="btn-primary" :href="'/hello-generic-agent/part1/chapter1/'" >开始学习</a>
           <a class="btn-secondary" href="https://github.com/datawhalechina/hello-generic-agent" target="_blank">GitHub ↗</a>
         </div>
       </div>
@@ -108,7 +108,7 @@
     <div class="jump-section">
       <h2 class="section-title">快速跳转</h2>
       <div class="jump-cta-row">
-        <a class="jump-card" :href="'/hello-generic-agent' + item.link" v-for="(item, idx) in jumpLinks" :key="idx">
+        <a class="jump-card" :href="item.external ? item.link : '/hello-generic-agent' + item.link" :target="item.external ? '_blank' : '_self'" v-for="(item, idx) in jumpLinks" :key="idx">
           <span class="jump-icon">{{ item.icon }}</span>
           <div>
             <h4>{{ item.title }}</h4>
@@ -184,31 +184,40 @@ onMounted(() => {
 
 /* ===== Carousel ===== */
 const chapters = [
-  { name: '什么是Agent', tag: '应用篇', desc: '理解Agent的核心概念', link: '/chapter1/' },
-  { name: '框架与工具', tag: '应用篇', desc: '主流Agent框架速览', link: '/chapter2/' },
-  { name: 'Agent实战', tag: '应用篇', desc: '从零搭建你的Agent', link: '/chapter3/' },
-  { name: '多Agent协作', tag: '应用篇', desc: '多智能体系统设计', link: '/chapter4/' },
-  { name: 'Agent原理', tag: '原理篇', desc: '深入推理与规划', link: '/chapter5/' },
-  { name: '记忆与学习', tag: '原理篇', desc: '长期记忆机制', link: '/chapter6/' },
-  { name: '工具使用', tag: '原理篇', desc: 'Tool Use深度解析', link: '/chapter7/' },
-  { name: '安全与对齐', tag: '原理篇', desc: 'Agent安全边界', link: '/chapter8/' },
+  { name: '第1章：安装与环境配置', tag: '应用篇', desc: '10 分钟搭好环境，和你的第一个 GA 说句话', link: '/part1/chapter1/' },
+  { name: '第2章：浏览器能力解锁', tag: '应用篇', desc: '装一个插件，让 GA 帮你操控浏览器', link: '/part1/chapter2/' },
+  { name: '第3章：基础使用', tag: '应用篇', desc: '熟悉界面、解锁视觉能力，掌握多轮对话技巧', link: '/part1/chapter3/' },
+  { name: '第4章：记忆与 Skill 系统', tag: '应用篇', desc: '教会 GA 一次，它就能永久记住并复用你的经验', link: '/part1/chapter4/' },
+  { name: '第5章：聊天平台接入', tag: '应用篇', desc: '接入微信/飞书/钉钉，用手机随时给 GA 下任务', link: '/part1/chapter5/' },
+  { name: '第6章：进阶玩法', tag: '应用篇', desc: '自主行动、定时任务、子代理——解锁 GA 的全部潜力', link: '/part1/chapter6/' },
+  { name: '第7章：上下文信息密度', tag: '原理篇', desc: '为什么上下文越长表现越差？理解 GA 的第一性原理', link: '/part2/chapter7/' },
+  { name: '第8章：系统全貌', tag: '原理篇', desc: '鸟瞰 GenericAgent 全架构，建立你的系统地图', link: '/part2/chapter8/' },
+  { name: '第9章：最小原子工具集', tag: '原理篇', desc: '只用 9 个工具覆盖完整能力环——不要瑞士军刀，要乐高积木', link: '/part2/chapter9/' },
+  { name: '第10章：分层记忆架构', tag: '原理篇', desc: '四层记忆如何让 GA 记住更多却不爆上下文', link: '/part2/chapter10/' },
+  { name: '第11章：上下文截断与压缩', tag: '原理篇', desc: '主动管理每一轮的信息预算，50 轮对话也不崩', link: '/part2/chapter11/' },
+  { name: '第12章：自我进化', tag: '原理篇', desc: '从用完即忘到越用越强——经验蒸馏的三阶段进化路径', link: '/part2/chapter12/' },
 ]
 const doubledChapters = [...chapters, ...chapters]
 const carouselTrack = ref(null)
 
 /* ===== Learn Items ===== */
 const learnItems = [
-  { icon: '🧠', title: '理解Agent架构', desc: '掌握感知-推理-行动循环，理解现代Agent系统的设计范式。' },
-  { icon: '🔧', title: '动手搭建Agent', desc: '使用主流框架（LangChain/AutoGen等）构建可运行的Agent。' },
-  { icon: '🤝', title: '多Agent协作', desc: '学习多智能体通信、任务分配与协同决策。' },
-  { icon: '📐', title: '前沿论文精读', desc: '精选ReAct、Toolformer、Voyager等经典论文深度解读。' },
+  { icon: '🚀', title: '从零跑通你的第一个 GA', desc: '安装环境、配好密钥、解锁浏览器与视觉能力——10 分钟拥有一个能干活的本地 Agent' },
+  { icon: '⚡', title: '沿着最佳实践快速养成 GA 核心能力', desc: 'Skill 沉淀、平台接入、进阶用法——跟着教程一步步做完，你的 GA 就从"刚装好"直接进化到"开箱即战"' },
+  { icon: '🔍', title: '读懂 GA 背后的设计原理', desc: '信息密度、最小工具集、分层记忆、自我进化——知其然更知其所以然，真正掌握 Agent 的底层逻辑' },
+  { icon: '🧠', title: '理解 Agent 设计的第一性原理', desc: '从"上下文越长表现越差"这个反直觉事实出发，掌握信息密度最大化的核心设计哲学' },
+  { icon: '🔧', title: '拆解 GA 的四大核心机制', desc: '最小原子工具集、分层记忆架构、上下文截断压缩、自我进化——逐一看懂每个机制为什么这样设计' },
+  { icon: '✨', title: '理解复杂能力如何从简单原语中涌现', desc: '没有专用调度器、没有事件总线——看 9 个工具 + 3 个运行时原语如何组合出子代理、看门狗、定时任务等高级功能' },
 ]
 
 /* ===== Jump Links ===== */
 const jumpLinks = [
-  { icon: '📖', title: '第一章：什么是Agent', desc: '从这里开始你的Agent之旅', link: '/chapter1/' },
-  { icon: '🛠️', title: '第三章：实战搭建', desc: '跟着代码一步步构建Agent', link: '/chapter3/' },
-  { icon: '🧪', title: '第五章：原理深入', desc: '探索推理与规划的底层机制', link: '/chapter5/' },
+  { icon: '🚀', title: '快速开始', desc: '10 分钟搭好环境', link: '/part1/chapter1/', external: false },
+  { icon: '📖', title: '应用篇', desc: '从安装到实战', link: '/part1/chapter1/', external: false },
+  { icon: '⚙️', title: '原理篇', desc: '深入设计哲学', link: '/part2/chapter7/', external: false },
+  { icon: '🐙', title: 'GitHub', desc: '查看源码', link: 'https://github.com/lsdefine/GenericAgent', external: true },
+  { icon: '📥', title: 'PDF 下载', desc: '离线阅读', link: 'https://github.com/AspasZhang/hello-generic-agent/releases', external: true },
+  { icon: '💬', title: '提 Issue', desc: '反馈与讨论', link: 'https://github.com/AspasZhang/hello-generic-agent/issues', external: true },
 ]
 
 /* ===== Team ===== */
