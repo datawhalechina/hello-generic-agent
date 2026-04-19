@@ -853,6 +853,25 @@ transform: rotateY(-5deg) rotateX(2deg);
 
 
 
+/* ===== Dark Mode ===== */
+.dark .figmint-hero { color: #e0e0e0; }
+.dark .headline { color: #f0f0f0; }
+.dark .subtext { color: #aaa; }
+.dark .eyebrow { color: #e07050; }
+.dark .btn-secondary { border-color: #555; color: #ccc; }
+.dark .btn-secondary:hover { border-color: #e07050; color: #e07050; }
+.dark .section-title { color: #e0e0e0; }
+.dark .learn-card { background: #2a2a2a; border-color: #444; }
+.dark .learn-card h3 { color: #e0e0e0; }
+.dark .learn-card p { color: #aaa; }
+.dark .carousel-card { background: #2a2a2a; border-color: #444; }
+.dark .carousel-title { color: #e0e0e0; }
+.dark .carousel-desc { color: #aaa; }
+.dark .jump-card { background: #2a2a2a; border-color: #444; }
+.dark .jump-card h4 { color: #e0e0e0; }
+.dark .jump-card p { color: #999; }
+.dark .jump-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.3); }
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .hero-content { flex-direction: column; padding: 40px 20px 20px; }
