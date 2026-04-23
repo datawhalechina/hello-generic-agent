@@ -67,7 +67,7 @@ export default defineConfig({
       {
         text: 'Part 3：实战篇',
         items: [
-          { text: '第14章：Case 1 — 自动在社交软件上发消息', link: '/part3/chapter14/' },
+          { text: 'Case 1：自动在社交软件上发消息', link: '/part3/chapter14/' },
         ]
       }
     ],
